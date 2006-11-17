@@ -6,7 +6,7 @@ Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://annodex.net/software/libcmml/download/%{name}-%{version}.tar.gz
-# Source0-md5:	00ece8c9a0363b37957ce670bcf270d3
+# Source0-md5:	44a1575a91ad32100df215766ca95b83
 URL:		http://annodex.net/software/libcmml/index.html
 BuildRequires:	expat-devel >= 1.95
 Requires:	expat >= 1.95
