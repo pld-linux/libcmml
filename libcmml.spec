@@ -1,5 +1,5 @@
 Summary:	A library for parsing CMML files
-Summary(pl):	Biblioteka do analizy plikÛw CMML
+Summary(pl.UTF-8):   Biblioteka do analizy plik√≥w CMML
 Name:		libcmml
 Version:	0.9.2
 Release:	1
@@ -22,20 +22,20 @@ Continuous Media Markup Language (CMML), and returns C structures
 containing this information in a format which can be used by an
 Annodexer for creating ANNODEX(tm) format documents (ANX).
 
-%description -l pl
-libcmml to biblioteka umoøliwiaj±ca obs≥ugÍ dokumentÛw napisanych w
-formacie CMML (Continuous Media Markup Language - jÍzyku oznaczeÒ dla
-mediÛw ci±g≥ych) dla CMWeb (Continuos Media Web - sieci dla mediÛw
-ci±g≥ych).
+%description -l pl.UTF-8
+libcmml to biblioteka umo≈ºliwiajƒÖca obs≈Çugƒô dokument√≥w napisanych w
+formacie CMML (Continuous Media Markup Language - jƒôzyku oznacze≈Ñ dla
+medi√≥w ciƒÖg≈Çych) dla CMWeb (Continuos Media Web - sieci dla medi√≥w
+ciƒÖg≈Çych).
 
-UdostÍpnia bardzo proste API do odczytu plikÛw ze znacznikami w
-formacie CMML, zwraca struktury C zawieraj±ce informacje w formacie,
-ktÛry moøe byÊ uøyty w Annodexerze do tworzenia dokumentÛw w formacie
+Udostƒôpnia bardzo proste API do odczytu plik√≥w ze znacznikami w
+formacie CMML, zwraca struktury C zawierajƒÖce informacje w formacie,
+kt√≥ry mo≈ºe byƒá u≈ºyty w Annodexerze do tworzenia dokument√≥w w formacie
 ANNODEX(tm) (ANX).
 
 %package devel
 Summary:	Header files for libcmml library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libcmml
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libcmml
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel >= 1.95
@@ -43,19 +43,19 @@ Requires:	expat-devel >= 1.95
 %description devel
 Header files for libcmml library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libcmml.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libcmml.
 
 %package static
 Summary:	Static libcmml library
-Summary(pl):	Statyczna biblioteka libcmml
+Summary(pl.UTF-8):   Statyczna biblioteka libcmml
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libcmml library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libcmml.
 
 %prep
