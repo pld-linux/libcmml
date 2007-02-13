@@ -1,5 +1,5 @@
 Summary:	A library for parsing CMML files
-Summary(pl.UTF-8):   Biblioteka do analizy plików CMML
+Summary(pl.UTF-8):	Biblioteka do analizy plików CMML
 Name:		libcmml
 Version:	0.9.2
 Release:	1
@@ -35,7 +35,7 @@ ANNODEX(tm) (ANX).
 
 %package devel
 Summary:	Header files for libcmml library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libcmml
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libcmml
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	expat-devel >= 1.95
@@ -48,7 +48,7 @@ Pliki nagłówkowe biblioteki libcmml.
 
 %package static
 Summary:	Static libcmml library
-Summary(pl.UTF-8):   Statyczna biblioteka libcmml
+Summary(pl.UTF-8):	Statyczna biblioteka libcmml
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
