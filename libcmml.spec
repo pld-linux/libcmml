@@ -1,3 +1,6 @@
+# Conditional build:
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	A library for parsing CMML files
 Summary(pl.UTF-8):	Biblioteka do analizy plików CMML
 Name:		libcmml
@@ -8,6 +11,7 @@ Group:		Libraries
 Source0:	http://annodex.net/software/libcmml/download/%{name}-%{version}.tar.gz
 # Source0-md5:	44a1575a91ad32100df215766ca95b83
 URL:		http://annodex.net/software/libcmml/index.html
+BuildRequires:	docbook-to-man
 BuildRequires:	expat-devel >= 1.95
 Requires:	expat >= 1.95
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -62,7 +66,8 @@ Statyczna biblioteka libcmml.
 %setup -q
 
 %build
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -95,6 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/cmml.h
 %{_pkgconfigdir}/cmml.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libcmml.a
+%endif
