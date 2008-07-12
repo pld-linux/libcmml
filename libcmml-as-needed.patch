@@ -1,0 +1,14 @@
+diff -urN libcmml-0.9.4/src/Makefile.am libcmml-0.9.4.new/src/Makefile.am
+--- libcmml-0.9.4/src/Makefile.am	2008-07-12 23:42:45.762002303 +0200
++++ libcmml-0.9.4.new/src/Makefile.am	2008-07-12 23:43:17.962207289 +0200
+@@ -42,7 +42,9 @@
+        cmml_element.c cmml_snprint.h \
+        cmml_list.c cmml_time.c
+ libcmml_la_LDFLAGS = -version-info @SHARED_VERSION_INFO@ @SHLIB_VERSION_ARG@
+-libcmml_la_LIBADD = @EXPAT_LIBS@
++libcmml_la_LIBADD = \
++	@EXPAT_LIBS@ \
++	-lm
+ 
+ #installation of public include file
+ include_HEADERS = cmml.h
