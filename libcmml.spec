@@ -6,14 +6,18 @@ Summary:	A library for parsing CMML files
 Summary(pl.UTF-8):	Biblioteka do analizy plików CMML
 Name:		libcmml
 Version:	0.9.4
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://annodex.net/software/libcmml/download/%{name}-%{version}.tar.gz
 # Source0-md5:	872984114263499acdf1617eae074cb4
+Patch0:		%{name}-as-needed.patch
 URL:		http://annodex.net/software/libcmml/index.html
+BuildRequires:	autoconf >= 2.53
+BuildRequires:	automake
 BuildRequires:	docbook-to-man
 BuildRequires:	expat-devel >= 1.95
+BuildRequires:	libtool
 Requires:	expat >= 1.95
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -65,8 +69,14 @@ Statyczna biblioteka libcmml.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal} -I m4
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	%{!?with_static_libs:--disable-static}
 %{__make}
