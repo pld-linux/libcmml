@@ -6,7 +6,7 @@ Summary:	A library for parsing CMML files
 Summary(pl.UTF-8):	Biblioteka do analizy plików CMML
 Name:		libcmml
 Version:	0.9.4
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries
 Source0:	http://annodex.net/software/libcmml/download/%{name}-%{version}.tar.gz
